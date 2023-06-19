@@ -1,0 +1,97 @@
+.card {
+	display: flex;
+	border-radius: 5px;
+	border: 1px solid rgb(142, 164, 216);
+	overflow: hidden;
+	min-height: 50px;
+
+	button {
+		border: none;
+	}
+	div,
+	button {
+		padding: 10px;
+		border-right: 1px solid rgb(142, 164, 216);
+	}
+	.nameCategories {
+		display: flex;
+		align-items: center;
+		flex: 0 0 16%;
+	}
+	.typeOperations {
+		display: flex;
+		align-items: center;
+		flex: 0 0 9%;
+	}
+	.sum {
+		text-align: center;
+		margin: auto;
+		max-width: 40px;
+		flex: 1 0 3%;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		border-right: none;
+
+		.showSum {
+			pointer-events: none;
+			opacity: 0;
+			padding: 0 3px;
+			background-color: #fff;
+			border: 1px solid rgb(88, 88, 88);
+			border-radius: 3px;
+			transition: all 0.3s ease-in-out;
+		}
+
+		&:hover {
+			.showSum {
+				opacity: 1;
+				position: absolute;
+			}
+		}
+	}
+	.description {
+		display: flex;
+		align-items: center;
+		flex: 1 0 24%;
+		border-left: 1px solid rgb(142, 164, 216);
+	}
+	.date {
+		flex: 0 0 5%;
+		border: none;
+		margin: auto;
+	}
+
+	button {
+		cursor: pointer;
+		background-color: rgb(216, 226, 248);
+		color: rgb(77, 114, 201);
+		flex: 0 0 11%;
+		margin-left: auto;
+		transition: all 0.3s ease;
+
+		&:hover {
+			background-color: rgb(142, 164, 216);
+			color: #fff;
+		}
+
+		&:active {
+			background-color: rgb(108, 143, 224);
+		}
+	}
+
+	.editButton {
+		border-left: 1px solid rgb(142, 164, 216);
+	}
+
+	.deleteButton {
+		border-right: none;
+		&:hover {
+			background-color: rgb(216, 142, 142);
+			color: #fff;
+		}
+
+		&:active {
+			background-color: rgb(227, 84, 84);
+		}
+	}
+}

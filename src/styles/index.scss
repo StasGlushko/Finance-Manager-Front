@@ -1,0 +1,35 @@
+// @import 'normalize.css/normalize.css';
+@import './reset.scss';
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,300;0,400;0,500;0,700;1,400&display=swap');
+
+body {
+	box-sizing: border-box;
+	font-family: 'Roboto Mono', monospace;
+	height: 100vh;
+
+	> div {
+		height: 100%;
+	}
+
+	::-webkit-scrollbar {
+		width: 10px; 
+		height: 10px;
+	}
+	
+	::-webkit-scrollbar-track {
+		background: rgb(236, 236, 236); 
+	}
+
+	::-webkit-scrollbar-thumb {
+		background-color: rgb(172, 178, 203); 
+		border-radius: 15px; 
+		border: 3px solid rgb(236, 236, 236); 
+	}
+}
+
+a {
+	color: white;
+	&:hover {
+		color: white;
+	}
+}

@@ -1,0 +1,18 @@
+.form {
+	button {
+		margin-top: 40px;
+		width: 150px;
+		padding: 10px;
+		border: 1px solid rgb(142, 164, 216);
+		cursor: pointer;
+		background-color: rgb(216, 226, 248);
+		color: rgb(77, 114, 201);
+		border-radius: 5px;
+		transition: all 0.3s ease;
+
+		&:hover {
+			background-color: rgb(142, 164, 216);
+			color: #fff;
+		}
+	}
+}
