@@ -54,8 +54,11 @@ export const PieInfoComponent: FC<IProps> = ({
 						value={from}
 						label='from'
 						onChange={handleChangeFrom}>
+						<MenuItem value=''>Reset</MenuItem>
 						{fromItems.map(el => (
-							<MenuItem value={el.date}>{el.date}</MenuItem>
+							<MenuItem key={el.date} value={el.date}>
+								{el.date}
+							</MenuItem>
 						))}
 					</Select>
 				</FormControl>
@@ -67,8 +70,11 @@ export const PieInfoComponent: FC<IProps> = ({
 						value={to}
 						label='to'
 						onChange={handleChangeTo}>
+						<MenuItem value=''>Reset</MenuItem>
 						{toItems.map(el => (
-							<MenuItem value={el.date}>{el.date}</MenuItem>
+							<MenuItem key={el.date} value={el.date}>
+								{el.date}
+							</MenuItem>
 						))}
 					</Select>
 				</FormControl>

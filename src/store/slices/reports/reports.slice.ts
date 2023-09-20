@@ -36,7 +36,9 @@ export const reports = createSlice({
 			state.from = action.payload
 		},
 		getDates: (state, { payload }: PayloadAction<IOperationsRes[]>) => {
-			payload.map(el => {
+			state.fromItems = []
+			state.toItems = []
+			payload.forEach(el => {
 				const msDate = ''
 				const item: IItem = {
 					date: el.date,
@@ -46,9 +48,27 @@ export const reports = createSlice({
 						is: '',
 					},
 				}
-				state.fromItems.push(item)
-				state.toItems.push(item)
+
+				if (
+					!Boolean(
+						state.toItems.map(element => element.date === el.date).at(-1),
+					)
+				) {
+					state.toItems.push(item)
+				}
+
+				if (
+					!Boolean(
+						state.fromItems
+							.map(element => element.date === el.date)
+							.at(-1),
+					)
+				) {
+					state.fromItems.push(item)
+				}
 			})
+
+			
 		},
 	},
 })

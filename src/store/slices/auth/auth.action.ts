@@ -1,10 +1,10 @@
 import { createAsyncThunk } from '@reduxjs/toolkit'
 import { instanceAxios } from '../../../api/api'
 import { IUserLogin, IUserReg } from '../../../types/UserAuth.interface'
-import { fetchAuthResponse } from '../../../types/Fetch.interface'
+import { IAuthRes } from '../../../types/Fetch.interface'
 
 export const fetchRegister = createAsyncThunk<
-	fetchAuthResponse,
+	IAuthRes,
 	IUserReg,
 	{ rejectValue: string }
 >('auth/register', async ({ userName, email, password }, thunkApi) => {
@@ -19,7 +19,7 @@ export const fetchRegister = createAsyncThunk<
 })
 
 export const fetchLogin = createAsyncThunk<
-	fetchAuthResponse,
+	IAuthRes,
 	IUserLogin,
 	{ rejectValue: string }
 >('auth/login', async ({ email, password }, thunkApi) => {
@@ -34,7 +34,7 @@ export const fetchLogin = createAsyncThunk<
 })
 
 export const fetchAuthMe = createAsyncThunk<
-	fetchAuthResponse,
+	IAuthRes,
 	unknown,
 	{ rejectValue: string }
 >('auth/me', async (_, thunkApi) => {

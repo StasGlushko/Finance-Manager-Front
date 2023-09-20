@@ -4,13 +4,16 @@ import { ErrorPage } from '../pages/Router-error-page/Error-page'
 import { Login } from '../pages/Login/LoginContainer'
 import { Register } from '../pages/Register/RegisterContainer'
 import { Paths } from './paths'
-import { RequireAuth } from '../hoc/RequireAuth'
 import { Categories } from '../pages/Categories/CategoriesContainer'
 import { AddEditCategories } from '../pages/Popups/AddEditCategories/AddEditCategories'
-import { Root } from '../ui/Layout/Root/Root'
 import { AddEditOperations } from '../pages/Popups/AddEditOperations/AddEditOperations'
 import { Operations } from '../pages/Operations/OperationsContainer'
-import { Reports } from '../pages/Reports/ReportsContainer';
+import { Reports } from '../pages/Reports/ReportsContainer'
+import { Loading } from '../pages/Loading/Loading'
+import { Home } from '../pages/Home/Home'
+import { RequireAuth } from '../hoc/RequireAuth'
+import { IsLoading } from '../hoc/IsLoading'
+import { Root } from '../ui/Layout/Root/Root'
 
 export const router = createBrowserRouter([
 	{
@@ -23,6 +26,14 @@ export const router = createBrowserRouter([
 		errorElement: <ErrorPage />,
 
 		children: [
+			{
+				element: (
+					<IsLoading>
+						<Home />
+					</IsLoading>
+				),
+				path: Paths.home,
+			},
 			{
 				path: Paths.categories,
 				element: <Categories />,
@@ -67,5 +78,9 @@ export const router = createBrowserRouter([
 		path: Paths.register,
 		element: <Register />,
 		errorElement: <ErrorPage />,
+	},
+	{
+		path: '/loading',
+		element: <Loading />,
 	},
 ])

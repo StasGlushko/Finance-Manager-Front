@@ -24,7 +24,7 @@ export const Reports: FC = () => {
 		const sum = (items: IOperationsRes[]): number =>
 			items.reduce<number>((acc: number, item: IOperationsRes) => {
 				if (item.nameCategories === name) {
-					return (acc += item.sum)
+					return (acc += Number(item.sum))
 				}
 
 				return acc
