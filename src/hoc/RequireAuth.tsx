@@ -1,31 +1,33 @@
-import { Navigate, useNavigate } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 import { FC, useEffect } from 'react'
 
 import { useActions } from '../hooks/useActions'
+import { useTypedSelector } from '../hooks/useTypedSelector'
 
 interface IProps {
 	children: React.ReactNode
 }
 
 export const RequireAuth: FC<IProps> = ({ children }) => {
+	const { isAuth } = useTypedSelector(state => state.auth)
 	const { fetchAuthMe } = useActions()
 	const navigate = useNavigate()
 
 	const token = window.localStorage.getItem('token')
 
-	// if (token) {
-	// 	fetchAuthMe(null)
-	// } else {
-	// 	return <Navigate to='/login' />
-	// }
+	const authorize = () => {
+		if (!isAuth) {
+			if (token) {
+				 fetchAuthMe(null)
+			} else {
+				navigate('/login')
+			}
+		}
+	}
 
 	useEffect(() => {
-		if (token) {
-			fetchAuthMe(null)
-		} else {
-			navigate('/login')
-		}
-	})
+		authorize()
+	}, [isAuth])
 
 	return <>{children}</>
 }
