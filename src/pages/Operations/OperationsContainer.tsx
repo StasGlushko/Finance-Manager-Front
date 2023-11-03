@@ -2,8 +2,8 @@ import { FC, useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
 
 import { OperationsComponent } from './OperationsComponent'
-import { useTypedSelector } from '../../hooks/useTypedSelector'
-import { useActions } from '../../hooks/useActions'
+import { useTypedSelector } from '@/hooks/useTypedSelector'
+import { useActions } from '@/hooks/useActions'
 
 export const Operations: FC = () => {
 	const { fetchOperations, fetchDeleteOperations, fetchCategoriesName } =

@@ -2,10 +2,10 @@ import { FC } from 'react'
 import { Outlet, NavigateFunction } from 'react-router-dom'
 
 import s from './Categories.module.scss'
-import { CategoriesCard } from '../../components/CategoriesCard/CategoriesCard'
-import { Paths } from '../../routing/paths'
-import { ICategoriesRes } from '../../types/Fetch.interface'
-import { Container } from '../../ui/Layout/Container/Container'
+import { CategoriesCard } from '@components/CategoriesCard/CategoriesCard'
+import { Paths } from '@/routing/paths'
+import { ICategoriesRes } from '@/types/Fetch.interface'
+import { Container } from '@pages/Layout/Container/Container'
 
 interface IProps {
 	navigate: NavigateFunction
@@ -53,7 +53,9 @@ export const CategoriesComponent: FC<IProps> = ({
 				Categories are missing, create new categories
 			</div>
 		)}
-		<button className={s.btn} onClick={() => navigate(Paths.addEdit)}>Add new category</button>
+		<button className={s.btn} onClick={() => navigate(Paths.addEdit)}>
+			Add new category
+		</button>
 		<Outlet />
 	</Container>
 )

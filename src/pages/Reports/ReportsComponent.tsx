@@ -2,8 +2,8 @@ import { FC } from 'react'
 // import { Line, Pie } from 'react-chartjs-2'
 
 import s from './Reports.module.scss'
-import { Container } from '../../ui/Layout/Container/Container'
-import { PieInfo } from '../../components/PieInfo/PieInfoContainer';
+import { Container } from '@pages/Layout/Container/Container'
+import { PieInfo } from '@components/PieInfo/PieInfoContainer';
 
 interface IProps {
 	items:

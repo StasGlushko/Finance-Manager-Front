@@ -1,8 +1,8 @@
 import { useNavigate } from 'react-router-dom'
 import { FC, useEffect } from 'react'
 
-import { useActions } from '../hooks/useActions'
-import { useTypedSelector } from '../hooks/useTypedSelector'
+import { useActions } from '@/hooks/useActions'
+import { useTypedSelector } from '@/hooks/useTypedSelector'
 
 interface IProps {
 	children: React.ReactNode

@@ -1,7 +1,7 @@
 import { FC, useEffect, useState } from 'react'
 
-import { Loader } from '../components/Loader/Loader'
-import { useTypedSelector } from '../hooks/useTypedSelector'
+import { Loader } from '@components/Loader/Loader'
+import { useTypedSelector } from '@/hooks/useTypedSelector'
 
 interface IProps {
 	children: React.ReactNode

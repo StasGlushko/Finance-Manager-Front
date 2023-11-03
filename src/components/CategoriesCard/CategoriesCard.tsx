@@ -2,8 +2,8 @@ import { FC } from 'react'
 import { NavigateFunction } from 'react-router-dom'
 
 import s from './CategoriesCard.module.scss'
-import { Paths } from '../../routing/paths'
-import { ICategoriesRes } from '../../types/Fetch.interface'
+import { Paths } from '@/routing/paths'
+import { ICategoriesRes } from '@/types/Fetch.interface'
 
 interface IProps {
 	info: ICategoriesRes

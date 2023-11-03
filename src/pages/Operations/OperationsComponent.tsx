@@ -2,10 +2,10 @@ import { FC } from 'react'
 import { Outlet, NavigateFunction } from 'react-router-dom'
 
 import s from './Operations.module.scss'
-import { OperationsCard } from '../../components/OperationsCard/OperationsCard'
-import { Paths } from '../../routing/paths'
-import { IOperationsRes } from '../../types/Fetch.interface'
-import { Container } from '../../ui/Layout/Container/Container';
+import { OperationsCard } from '@components/OperationsCard/OperationsCard'
+import { Paths } from '@/routing/paths'
+import { IOperationsRes } from '@/types/Fetch.interface'
+import { Container } from '@pages/Layout/Container/Container';
 
 interface IProps {
 	navigate: NavigateFunction

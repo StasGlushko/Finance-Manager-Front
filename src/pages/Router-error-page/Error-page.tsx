@@ -1,6 +1,7 @@
-import { useRouteError, isRouteErrorResponse } from 'react-router-dom'
-import s from './ErrorPage.module.scss'
 import { FC } from 'react';
+import { useRouteError, isRouteErrorResponse } from 'react-router-dom'
+
+import s from './ErrorPage.module.scss'
 
 export const ErrorPage: FC = () => {
 	const error = useRouteError()

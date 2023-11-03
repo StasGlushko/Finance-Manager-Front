@@ -1,9 +1,10 @@
 import { FC, useEffect } from 'react'
 
-import { PieInfoComponent } from './PieInfoComponent'
-import { useTypedSelector } from '../../hooks/useTypedSelector'
 import { SelectChangeEvent } from '@mui/material'
-import { useActions } from '../../hooks/useActions'
+
+import { PieInfoComponent } from './PieInfoComponent'
+import { useTypedSelector } from '@/hooks/useTypedSelector'
+import { useActions } from '@/hooks/useActions'
 
 type item = {
 	name: string

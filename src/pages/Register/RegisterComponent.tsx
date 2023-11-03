@@ -18,7 +18,7 @@ import { TextField } from '@mui/material'
 import Button from '@mui/material/Button'
 
 import s from './Register.module.scss'
-import { IUserReg } from '../../types/UserAuth.interface'
+import { IUserReg } from '@/types/UserAuth.interface'
 
 interface IProps {
 	formSubmit: (user: IUserReg) => void

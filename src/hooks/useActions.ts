@@ -2,28 +2,28 @@ import { bindActionCreators } from '@reduxjs/toolkit'
 import { useMemo } from 'react'
 import { useDispatch } from 'react-redux'
 
-import { auth } from '../store/slices/auth/auth.slice'
-import { categories } from '../store/slices/categories/categories.slice'
-import { operations } from '../store/slices/operations/operations.slice'
-import { reports } from '../store/slices/reports/reports.slice';
+import { auth } from '@/store/slices/auth/auth.slice'
+import { categories } from '@/store/slices/categories/categories.slice'
+import { operations } from '@/store/slices/operations/operations.slice'
+import { reports } from '@/store/slices/reports/reports.slice';
 import {
 	fetchRegister,
 	fetchLogin,
 	fetchAuthMe,
-} from '../store/slices/auth/auth.action'
+} from '@/store/slices/auth/auth.action'
 import {
 	fetchCategories,
 	fetchCreateCategories,
 	fetchDeleteCategories,
 	fetchEditCategories,
 	fetchCategoriesName,
-} from '../store/slices/categories/categories.action'
+} from '@/store/slices/categories/categories.action'
 import {
 	fetchOperations,
 	fetchCreateOperations,
 	fetchDeleteOperations,
 	fetchEditOperations,
-} from '../store/slices/operations/operations.action'
+} from '@/store/slices/operations/operations.action'
 
 const rootActions = {
 	...auth.actions,

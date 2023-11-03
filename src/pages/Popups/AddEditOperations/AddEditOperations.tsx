@@ -12,11 +12,11 @@ import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs'
 import { DateField } from '@mui/x-date-pickers'
 
 import s from './AddEditOperations.module.scss'
-import { Popup } from '../../../ui/Layout/Popup/Popup'
-import { useTypedSelector } from '../../../hooks/useTypedSelector'
-import { useActions } from '../../../hooks/useActions'
-import { Paths } from '../../../routing/paths'
-import { IAddEditOperations } from '../../../types/Fetch.interface'
+import { Popup } from '@pages/Layout/Popup/Popup'
+import { useTypedSelector } from '@/hooks/useTypedSelector'
+import { useActions } from '@/hooks/useActions'
+import { Paths } from '@/routing/paths'
+import { IAddEditOperations } from '@/types/Fetch.interface'
 
 export const AddEditOperations: FC = () => {
 	const navigate = useNavigate()

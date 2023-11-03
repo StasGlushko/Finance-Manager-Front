@@ -3,7 +3,7 @@ import { NavigateFunction } from 'react-router-dom'
 
 import s from './OperationsCard.module.scss'
 import { Paths } from '../../routing/paths'
-import { IOperationsRes } from '../../types/Fetch.interface'
+import { IOperationsRes } from '@/types/Fetch.interface'
 
 interface IProps {
 	info: IOperationsRes

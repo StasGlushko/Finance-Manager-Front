@@ -3,9 +3,9 @@ import { FC } from 'react'
 import { useForm } from 'react-hook-form'
 
 import { LoginComponent } from './LoginComponent'
-import { useActions } from '../../hooks/useActions'
-import { useTypedSelector } from '../../hooks/useTypedSelector'
-import { IUserLogin } from '../../types/UserAuth.interface'
+import { useActions } from '@/hooks/useActions'
+import { useTypedSelector } from '@/hooks/useTypedSelector'
+import { IUserLogin } from '@/types/UserAuth.interface'
 
 export const Login: FC = () => {
 	const { fetchLogin } = useActions()
