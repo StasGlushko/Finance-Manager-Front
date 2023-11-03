@@ -1,8 +1,8 @@
 import { useEffect, FC } from 'react'
 
 import { CategoriesComponent } from './CategoriesComponent'
-import { useActions } from '@/hooks/useActions'
-import { useTypedSelector } from '@/hooks/useTypedSelector'
+import { useActions } from '@hooks/useActions'
+import { useTypedSelector } from '@hooks/useTypedSelector'
 import { useNavigate } from 'react-router-dom'
 
 export const Categories: FC = () => {

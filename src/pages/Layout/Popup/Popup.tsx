@@ -1,8 +1,10 @@
-import s from './Popup.module.scss'
 import { IoClose } from 'react-icons/io5'
 import { FC } from 'react'
 import * as React from 'react'
 import { useNavigate, useMatches } from 'react-router-dom'
+
+import s from './Popup.module.scss'
+
 import { Paths } from '@/routing/paths'
 
 interface IProps {

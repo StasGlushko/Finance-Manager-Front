@@ -4,8 +4,8 @@ import { useNavigate, Navigate } from 'react-router-dom'
 
 import { RegisterComponent } from './RegisterComponent'
 import { IUserReg } from '@/types/UserAuth.interface'
-import { useActions } from '@/hooks/useActions'
-import { useTypedSelector } from '@/hooks/useTypedSelector'
+import { useActions } from '@hooks/useActions'
+import { useTypedSelector } from '@hooks/useTypedSelector'
 
 export const Register: FC = () => {
 	const { fetchRegister } = useActions()

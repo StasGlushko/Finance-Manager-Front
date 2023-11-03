@@ -13,7 +13,7 @@ import Menu from '@mui/material/Menu'
 import { Button } from '@mui/material'
 
 import { Paths } from '@/routing/paths'
-import { useActions } from '@/hooks/useActions'
+import { useActions } from '@hooks/useActions'
 
 export const Header: FC = () => {
 	const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null)

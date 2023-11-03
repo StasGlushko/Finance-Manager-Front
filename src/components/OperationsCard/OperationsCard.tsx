@@ -2,7 +2,7 @@ import { FC } from 'react'
 import { NavigateFunction } from 'react-router-dom'
 
 import s from './OperationsCard.module.scss'
-import { Paths } from '../../routing/paths'
+import { Paths } from '@/routing/paths'
 import { IOperationsRes } from '@/types/Fetch.interface'
 
 interface IProps {

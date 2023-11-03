@@ -13,7 +13,6 @@ import { Home } from '@pages/Home/Home'
 import { RequireAuth } from '@/hoc/RequireAuth'
 import { IsLoading } from '@/hoc/IsLoading'
 import { Root } from '@pages/Layout/Root/Root'
-import { Loading } from '@/ui/Loading/Loading'
 
 export const router = createBrowserRouter([
 	{
@@ -78,9 +77,5 @@ export const router = createBrowserRouter([
 		path: Paths.register,
 		element: <Register />,
 		errorElement: <ErrorPage />,
-	},
-	{
-		path: '/loading',
-		element: <Loading />,
 	},
 ])

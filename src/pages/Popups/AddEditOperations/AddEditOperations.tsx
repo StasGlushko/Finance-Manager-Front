@@ -13,8 +13,8 @@ import { DateField } from '@mui/x-date-pickers'
 
 import s from './AddEditOperations.module.scss'
 import { Popup } from '@pages/Layout/Popup/Popup'
-import { useTypedSelector } from '@/hooks/useTypedSelector'
-import { useActions } from '@/hooks/useActions'
+import { useTypedSelector } from '@hooks/useTypedSelector'
+import { useActions } from '@hooks/useActions'
 import { Paths } from '@/routing/paths'
 import { IAddEditOperations } from '@/types/Fetch.interface'
 

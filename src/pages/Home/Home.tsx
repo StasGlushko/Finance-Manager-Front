@@ -2,7 +2,6 @@ import { FC } from 'react'
 import { Link } from 'react-router-dom'
 
 import s from './Home.module.scss'
-// import { Loader } from '@components/Loader/Loader'
 import { Paths } from '@/routing/paths'
 
 export const Home: FC = () => {

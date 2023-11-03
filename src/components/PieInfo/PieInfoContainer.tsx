@@ -3,8 +3,8 @@ import { FC, useEffect } from 'react'
 import { SelectChangeEvent } from '@mui/material'
 
 import { PieInfoComponent } from './PieInfoComponent'
-import { useTypedSelector } from '@/hooks/useTypedSelector'
-import { useActions } from '@/hooks/useActions'
+import { useTypedSelector } from '@hooks/useTypedSelector'
+import { useActions } from '@hooks/useActions'
 
 type item = {
 	name: string

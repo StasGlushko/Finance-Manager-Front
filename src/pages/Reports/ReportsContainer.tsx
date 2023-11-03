@@ -1,8 +1,8 @@
 import { FC, useEffect } from 'react'
 
 import { ReportsComponent } from './ReportsComponent'
-import { useActions } from '@/hooks/useActions'
-import { useTypedSelector } from '@/hooks/useTypedSelector'
+import { useActions } from '@hooks/useActions'
+import { useTypedSelector } from '@hooks/useTypedSelector'
 import { IOperationsRes } from '@/types/Fetch.interface'
 
 export const Reports: FC = () => {

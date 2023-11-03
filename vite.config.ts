@@ -6,12 +6,14 @@ import path from 'path'
 export default defineConfig({
 	plugins: [react()],
 	resolve: {
-		alias: [
-			{ find: '@', replacement: path.resolve(__dirname, 'src/') },
-			{ find: '@pages', replacement: path.resolve(__dirname, 'src/pages/') },
-			{ find: '@styles', replacement: path.resolve(__dirname, 'src/styles/') },
-			{ find: '@components', replacement: path.resolve(__dirname, 'src/components/') },
-			{ find: '@ui', replacement: path.resolve(__dirname, 'src/ui/') },
-		],
+		alias: {
+			'@': path.resolve(__dirname, './src/'),
+			'@ui': path.resolve(__dirname, './src/ui'),
+			'@components': path.resolve(__dirname, './src/components'),
+			'@store': path.resolve(__dirname, './src/store'),
+			'@hooks': path.resolve(__dirname, './src/hooks'),
+			'@pages': path.resolve(__dirname, './src/pages'),
+			'@styles': path.resolve(__dirname, './src/styles'),
+		},
 	},
 })

@@ -7,10 +7,10 @@ import FormControl from '@mui/material/FormControl'
 
 import s from './AddEditCategories.module.scss'
 import { Paths } from '@/routing/paths'
-import { useActions } from '@/hooks/useActions'
-import { useTypedSelector } from '@/hooks/useTypedSelector'
+import { useActions } from '@hooks/useActions'
+import { useTypedSelector } from '@hooks/useTypedSelector'
 import { IAddEditCategories } from '@/types/Fetch.interface'
-import { Popup } from '@/pages/Layout/Popup/Popup'
+import { Popup } from '@pages/Layout/Popup/Popup'
 
 export const AddEditCategories: FC = () => {
 	const navigate = useNavigate()
