@@ -6,6 +6,12 @@ import path from 'path'
 export default defineConfig({
 	plugins: [react()],
 	resolve: {
-    alias: [{ find: '@', replacement: path.resolve(__dirname, 'src') }],
+		alias: [
+			{ find: '@', replacement: path.resolve(__dirname, 'src/') },
+			{ find: '@pages', replacement: path.resolve(__dirname, 'src/pages/') },
+			{ find: '@styles', replacement: path.resolve(__dirname, 'src/styles/') },
+			{ find: '@components', replacement: path.resolve(__dirname, 'src/components/') },
+			{ find: '@ui', replacement: path.resolve(__dirname, 'src/ui/') },
+		],
 	},
 })
