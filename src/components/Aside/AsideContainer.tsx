@@ -55,11 +55,12 @@ export const Aside: FC = () => {
 	}
 
 	const location = useLocation()
+	
 
 	useEffect(() => {
-		setLinks(links => {
-			return links.map(el => {
-				if (el.path === location.pathname) {
+		setLinks(link => {
+			return link.map(el => {
+				if (el.path === '/' + location.pathname.split('/')[1]) {
 					el.isActive = true
 				} else {
 					el.isActive = false

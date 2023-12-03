@@ -19,8 +19,6 @@ interface IProps {
 	standardSize: boolean
 }
 
-// добавити зменшення збільшення aside bar іконки - 'TbLayoutSidebarLeftExpand' 'TbLayoutSidebarLeftCollapse'
-
 export const AsideComponent: FC<IProps> = ({
 	links,
 	logoutFn,
@@ -37,18 +35,20 @@ export const AsideComponent: FC<IProps> = ({
 						onClick={() => !standardSize && toggleSize()}>
 						{links[activeIdEl()].icon}
 					</span>
-					{standardSize && links[activeIdEl()].text}
-					<button className={s.toggleShow} onClick={toggleSize}>
+					<span className={s.hide}>{links[activeIdEl()].text}</span>
+					<button
+						className={s.toggleShow + ' ' + s.hide}
+						onClick={toggleSize}>
 						{standardSize && <TbLayoutSidebarLeftCollapse />}
 					</button>
 				</h3>
-				<Nav links={links} standardSize={standardSize} />
+				<Nav links={links} />
 			</div>
 			<button className={s.logoutBtn} onClick={logoutFn}>
-				<span>
+				<span className={s.icon}>
 					<BiLogOut />
 				</span>
-				{standardSize && 'Logout'}
+				<span className={s.hide}>logout</span>
 			</button>
 		</aside>
 	)

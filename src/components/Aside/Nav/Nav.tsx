@@ -7,10 +7,9 @@ import { ILink } from '../AsideContainer'
 
 interface IProps {
 	links: ILink[]
-	standardSize: boolean
 }
 
-export const Nav: FC<IProps> = ({ links, standardSize }) => {
+export const Nav: FC<IProps> = ({ links }) => {
 	return (
 		<nav className={s.linkList}>
 			{links.map(el => (
@@ -19,7 +18,7 @@ export const Nav: FC<IProps> = ({ links, standardSize }) => {
 					className={s.link + ' ' + (el.isActive ? s.active : '')}
 					to={el.path}>
 					<span>{el.icon}</span>
-					{standardSize && el.text}
+					<span className={s.hide}>{el.text}</span>
 				</Link>
 			))}
 		</nav>

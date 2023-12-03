@@ -11,7 +11,7 @@ export const Root: FC = () => {
 		<div className={s.container}>
 			<Aside />
 			<div className={s.content}>
-				<Header />
+				{/* <Header /> */}
 				<Outlet />
 			</div>
 		</div>

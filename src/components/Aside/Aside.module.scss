@@ -11,13 +11,22 @@
 	flex-direction: column;
 	justify-content: space-between;
 
+	transition: width .3s ease;
+	
+	.hide {
+		transition: color .2s ease;
+	}
+
 	&.small {
 		width: 57px;
-		// width: auto;
+
+		.hide {
+			color: transparent;
+		}
 	}
 
 	.title {
-		padding: 0 0 16px 0 ;
+		padding: 0 0 20px 0 ;
 		display: flex;
 		align-items: center;
 		gap: 10px;
@@ -38,6 +47,10 @@
 				cursor: pointer;
 			}
 
+			.text {
+				text-align: center;
+			}
+
 			svg {
 				width: 32px;
 				height: 32px;
@@ -53,8 +66,6 @@
 			display: flex;
 			align-items: center;
 			justify-content: center;
-			// height: 25px;
-			// width: 25px;
 			margin-left: auto;
 
 			svg {
@@ -74,7 +85,8 @@
 			align-items: center;
 			gap: 8px;
 
-			// height: 33px;
+			font-size: 16px;
+
 			padding: 8px 8px;
 			border-radius: 7px;
 
@@ -102,7 +114,6 @@
 
 		padding: 8px 8px;
 		border-radius: 7px;
-		// height: 33px;
 
 		transition: all 0.3s ease;
 
@@ -110,7 +121,7 @@
 			background-color: hsla(0, 0%, 0%, 0.1);
 		}
 
-		> span {
+		.icon {
 			width: 16px;
 			height: 16px;
 
@@ -118,6 +129,10 @@
 				width: 16px;
 				height: 16px;
 			}
+		}
+
+		.text {
+			text-align: center;
 		}
 	}
 }
